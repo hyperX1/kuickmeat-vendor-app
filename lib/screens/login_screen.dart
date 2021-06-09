@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           enabledBorder: OutlineInputBorder(),
                           contentPadding: EdgeInsets.zero,
                           hintText: 'Email',
-                          prefixIcon: Icon(Icons.email_outlined),
+                          prefixIcon: Icon(Icons.email_outlined,color: Theme.of(context).primaryColor,),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 color: Theme.of(context).primaryColor, width: 2),
@@ -105,6 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         obscureText: _visible==false ? true : false,
                         decoration: InputDecoration(
                           suffixIcon: IconButton(
+                            color: Theme.of(context).primaryColor,
                             icon: _visible ? Icon(Icons.visibility) : Icon(Icons.visibility_off),
                           onPressed: (){
                             setState(() {
@@ -115,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           enabledBorder: OutlineInputBorder(),
                           contentPadding: EdgeInsets.zero,
                           hintText: 'Password',
-                          prefixIcon: Icon(Icons.vpn_key_outlined),
+                          prefixIcon: Icon(Icons.vpn_key_outlined,color: Theme.of(context).primaryColor,),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 color: Theme.of(context).primaryColor, width: 2),

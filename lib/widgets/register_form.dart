@@ -72,7 +72,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 return null;
               },
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.add_business),
+                prefixIcon: Icon(Icons.add_business, color: Theme.of(context).primaryColor),
                 labelText: 'Shop Name',
                 contentPadding: EdgeInsets.zero,
                 enabledBorder: OutlineInputBorder(),
@@ -100,7 +100,7 @@ class _RegisterFormState extends State<RegisterForm> {
               },
               decoration: InputDecoration(
                 prefixText: '+92',
-                prefixIcon: Icon(Icons.phone_android),
+                prefixIcon: Icon(Icons.phone_android, color: Theme.of(context).primaryColor),
                 labelText: 'Mobile Number',
                 contentPadding: EdgeInsets.zero,
                 enabledBorder: OutlineInputBorder(),
@@ -131,7 +131,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 return null;
               },
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.email_outlined),
+                prefixIcon: Icon(Icons.email_outlined, color: Theme.of(context).primaryColor),
                 labelText: 'Email',
                 contentPadding: EdgeInsets.zero,
                 enabledBorder: OutlineInputBorder(),
@@ -160,7 +160,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 return null;
               },
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.vpn_key_outlined),
+                prefixIcon: Icon(Icons.vpn_key_outlined, color: Theme.of(context).primaryColor),
                 labelText: 'Password',
                 contentPadding: EdgeInsets.zero,
                 enabledBorder: OutlineInputBorder(),
@@ -189,7 +189,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 return null;
               },
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.vpn_key_outlined),
+                prefixIcon: Icon(Icons.vpn_key_outlined, color: Theme.of(context).primaryColor),
                 labelText: 'Confirm Password',
                 contentPadding: EdgeInsets.zero,
                 enabledBorder: OutlineInputBorder(),
@@ -216,7 +216,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 return null;
               },
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.contact_mail_outlined),
+                prefixIcon: Icon(Icons.contact_mail_outlined, color: Theme.of(context).primaryColor),
                 labelText: 'Business Location',
                 suffixIcon: IconButton(
                   icon: Icon(Icons.location_searching),
@@ -249,7 +249,7 @@ class _RegisterFormState extends State<RegisterForm> {
                 _dialogTextController.text=value;
               },
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.comment),
+                prefixIcon: Icon(Icons.comment, color: Theme.of(context).primaryColor),
                 labelText: 'Shop Dialog',
                 contentPadding: EdgeInsets.zero,
                 enabledBorder: OutlineInputBorder(),

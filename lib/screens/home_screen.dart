@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
-import 'package:kuickmeat_vendor_app/screens/dashboard_screen.dart';
 import 'package:kuickmeat_vendor_app/services/drawer_services.dart';
 import 'package:kuickmeat_vendor_app/widgets/drawer_menu_widget.dart';
 
