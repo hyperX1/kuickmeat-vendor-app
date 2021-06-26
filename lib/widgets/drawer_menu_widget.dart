@@ -74,14 +74,11 @@ class _MenuWidgetState extends State<MenuWidget> {
           SizedBox(
             height: 10,
           ),
-          sliderItem('Dashboard', Icons.dashboard_outlined),
           sliderItem('Product', Icons.shopping_bag_outlined),
           sliderItem('Banner', CupertinoIcons.photo),
           sliderItem('Coupons', CupertinoIcons.gift),
           sliderItem('Orders', Icons.list_alt_outlined),
-          sliderItem('Reports', Icons.stacked_bar_chart),
-          sliderItem('Setting', Icons.settings_outlined),
-          sliderItem('LogOut', Icons.arrow_back_ios)
+          sliderItem('LogOut', Icons.arrow_back_ios,),
         ],
       ),
     );

@@ -1,10 +1,9 @@
 import 'dart:io';
-
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:kuickmeat_vendor_app/providers/auth_provider.dart';
-import 'package:kuickmeat_vendor_app/screens/home_screen.dart';
+import 'package:kuickmeat_vendor_app/screens/login_screen.dart';
 import 'package:provider/provider.dart';
 
 class RegisterForm extends StatefulWidget {
@@ -286,11 +285,11 @@ class _RegisterFormState extends State<RegisterForm> {
                                   mobile: mobile,
                                   shopName: shopName,
                                   dialog: _dialogTextController.text,
+                                  context: context,
                                 );
                                  setState(() {
                                    _isLoading=false;
                                  });
-                                  Navigator.pushReplacementNamed(context, HomeScreen.id);
 
                                 //after finish all the process will navigate to home screen
 
@@ -313,6 +312,25 @@ class _RegisterFormState extends State<RegisterForm> {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              FlatButton(
+                padding: EdgeInsets.zero,
+                child: RichText(
+                  text: TextSpan(
+                      text: '',
+                      children: [
+                        TextSpan(text: 'Already have an account? ',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                        TextSpan(text: 'Login',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red),),
+                      ]
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.pushNamed(context, LoginScreen.id);
+                },
               ),
             ],
           ),

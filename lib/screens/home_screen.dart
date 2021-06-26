@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
               });
             },
           ),
-          sliderMain: _services.drawerScreen(title)),
+          sliderMain: _services.drawerScreen(title,context)),
     );
   }
 }

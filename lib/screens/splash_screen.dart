@@ -2,10 +2,8 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:kuickmeat_vendor_app/screens/home_screen.dart';
 import 'package:kuickmeat_vendor_app/screens/login_screen.dart';
-import 'package:kuickmeat_vendor_app/screens/register_screen.dart';
-
-import 'home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String id = 'splash-screen';
@@ -39,27 +37,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Hero(
-        tag: 'logo',
-        child: Center(
+      body: Center(
           child: AnimatedContainer(
-            duration: Duration(seconds: 1),
-            curve: Curves.fastOutSlowIn,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'images/beef.png',
-                  height: 100,
-                  width: 100,
-                ),
-                Text('Kuick Meat - Vendor App',style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),),
-              ],
+            duration: Duration(seconds: 3),
+            curve: Curves.easeIn,
+            child: Image.asset(
+              'images/logo.png',
+              height: 350,
+              width: 350,
             ),
           ),
         ),
-      ),
     );
   }
 }

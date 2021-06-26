@@ -91,6 +91,7 @@ class PublishedProducts extends StatelessWidget {
     }).toList();
     return newList;
   }
+
   Widget popUpButton(data,{BuildContext context}) {
 
     FirebaseServices _services = FirebaseServices();

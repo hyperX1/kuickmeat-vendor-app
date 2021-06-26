@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:geocoder/geocoder.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:kuickmeat_vendor_app/screens/home_screen.dart';
 import 'package:location/location.dart';
 
 class AuthProvider extends ChangeNotifier{
@@ -19,6 +20,8 @@ class AuthProvider extends ChangeNotifier{
   String shopAddress;
   String placeName;
   String email='';
+
+  CollectionReference _vendors = FirebaseFirestore.instance.collection('vendors');
 
   Future<File> getImage() async {
     final picker = ImagePicker();
@@ -143,7 +146,7 @@ class AuthProvider extends ChangeNotifier{
   //save vendor data to Firestore
 
   Future<void> saveVendorDataToDb(
-      {String url, String shopName, String mobile, String dialog}){
+      {String url, String shopName, String mobile, String dialog,context}){
     User user = FirebaseAuth.instance.currentUser;
     DocumentReference _vendors = FirebaseFirestore.instance.collection('vendors').doc(user.uid);
     _vendors.set({
@@ -160,6 +163,8 @@ class AuthProvider extends ChangeNotifier{
       'isTopPicked':false, //initial value will always be false
       'imageUrl':url,
       'accVerified': false, //initial value will always be false
+    }).whenComplete((){
+      Navigator.pushReplacementNamed(context, HomeScreen.id);
     });
     return null;
   }
